@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <algorithm> //Sort
 #include <vector>
-#include<chrono>
+#include <chrono>
 #include <stdlib.h>
 
 bool linearSearch(int key, std::vector<int>& v);
@@ -20,7 +20,7 @@ int main() {
 		v.push_back((std::rand() % 2001) - 1000);
 	}
 	std::sort(v.begin(), v.end());
-	double  linearDuration=0;
+	double  linearDuration;
 	double binaryDuration;
 	for (int i = 0; i < 30; i++) {
 		int key = v.at(std::rand() % v.size());
@@ -47,7 +47,7 @@ bool linearSearch(int key, std::vector<int>& v) {
 }
 bool binarySearch(int begin, int end, int key, std::vector<int>& v) {
 	int center = (end - begin) / 2;
-	if (end <= begin) {
+	if (end < begin) {
 		return 0;
 	}
 	else {
