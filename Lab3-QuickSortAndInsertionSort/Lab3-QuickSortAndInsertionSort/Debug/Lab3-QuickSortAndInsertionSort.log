@@ -1,3 +1,4 @@
 ﻿  Lab3.cpp
-  Lab3-QuickSortAndInsertionSort.vcxproj -> D:\Workspace\CECS-328\Lab3-QuickSortAndInsertionSort\Debug\Lab3-QuickSortAndInsertionSort.exe
-  Lab3-QuickSortAndInsertionSort.vcxproj -> D:\Workspace\CECS-328\Lab3-QuickSortAndInsertionSort\Debug\Lab3-QuickSortAndInsertionSort.pdb (Full PDB)
+d:\workstation\cecs-328\lab3-quicksortandinsertionsort\lab3-quicksortandinsertionsort\lab3.cpp(77): warning C4018: '<': signed/unsigned mismatch
+  Lab3-QuickSortAndInsertionSort.vcxproj -> D:\Workstation\CECS-328\Lab3-QuickSortAndInsertionSort\Debug\Lab3-QuickSortAndInsertionSort.exe
+  Lab3-QuickSortAndInsertionSort.vcxproj -> D:\Workstation\CECS-328\Lab3-QuickSortAndInsertionSort\Debug\Lab3-QuickSortAndInsertionSort.pdb (Partial PDB)
