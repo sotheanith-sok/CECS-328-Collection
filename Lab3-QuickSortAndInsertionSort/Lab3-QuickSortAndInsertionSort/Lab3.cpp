@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <chrono>
 
-void quickSort(int , int , std::vector<int> );
+void quickSort(int a, int b, std::vector<int>& v );
 void insertionSort(std::vector<int>);
 int main() { 
 	srand((unsigned)time(0));
@@ -20,12 +20,13 @@ int main() {
 	//Quicksort
 	double totalTimeForQuickSort = 0;
 	for (int i = 0; i < 100; i++) {
-		std::vector<int>v;
+		std::vector<int> v;
 		for (int i = 0; i < size; i++) {
 			v.push_back((std::rand() % 14001) - 7000);
 		}
-		t1=  std::chrono::high_resolution_clock::now();
+		t1 = std::chrono::high_resolution_clock::now();
 		quickSort(0, v.size() - 1, v);
+
 		t2 = std::chrono::high_resolution_clock::now();
 		totalTimeForQuickSort += (std::chrono::duration<double, std::nano>(t2 - t1)).count();
 	}
@@ -45,7 +46,7 @@ int main() {
 	std::cout << "Average running for InsertionSort: " << (totalTimeForInsertionSort / 100) << std::endl;
 	return 0;
 }
-void quickSort(int low, int high, std::vector<int> v) {
+void quickSort(int low, int high, std::vector<int>& v) {
 	if (low < high) {
 		int pivot=(low+high)/2;
 		//Find median of 3
@@ -63,7 +64,7 @@ void quickSort(int low, int high, std::vector<int> v) {
 			if (v[i]>v[pivot]) {
 				int temp = v[i];
 				v.erase(v.begin() + i);
-				v.insert(v.begin() + pivot, temp);
+				v.insert(v.begin()+pivot, temp);
 				pivot--;
 				i--;
 			}
