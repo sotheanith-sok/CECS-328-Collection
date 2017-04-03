@@ -6,7 +6,7 @@
 #include <chrono>
 
 void quickSort(int a, int b, std::vector<int>& v );
-void insertionSort(std::vector<int>& v);
+void insertionSort(std::vector<int> v);
 int main() { 
 	srand((unsigned)time(0));
 	int size;
@@ -19,31 +19,28 @@ int main() {
 	auto t2 = std::chrono::high_resolution_clock::now();
 	//Quicksort
 	double totalTimeForQuickSort = 0;
+	double totalTimeForInsertionSort = 0;
 	for (int i = 0; i < 100; i++) {
 		std::vector<int> v;
 		for (int i = 0; i < size; i++) {
 			v.push_back((std::rand() % 14001) - 7000);
 		}
-		t1 = std::chrono::high_resolution_clock::now();
-		quickSort(0, v.size() - 1, v);
-
-		t2 = std::chrono::high_resolution_clock::now();
-		totalTimeForQuickSort += (std::chrono::duration<double, std::nano>(t2 - t1)).count();
-	}
-	//InsertionSort
-	double totalTimeForInsertionSort = 0;
-	for (int i = 0; i < 100; i++) {
-		std::vector<int>v;
-		for (int i = 0; i < size; i++) {
-			v.push_back((std::rand() % 14001) - 7000);
-		}
+		std::cout << i << std::endl;
 		t1 = std::chrono::high_resolution_clock::now();
 		insertionSort(v);
 		t2 = std::chrono::high_resolution_clock::now();
 		totalTimeForInsertionSort += (std::chrono::duration<double, std::nano>(t2 - t1)).count();
+		std::cout << i << std::endl;
+		t1 = std::chrono::high_resolution_clock::now();
+		quickSort(0, v.size() - 1, v);
+		t2 = std::chrono::high_resolution_clock::now();
+		totalTimeForQuickSort += (std::chrono::duration<double, std::nano>(t2 - t1)).count();
+		std::cout << i << std::endl;
 	}
-	std::cout << "Average running for Quicksort: " << (totalTimeForQuickSort / 100) << std::endl;
-	std::cout << "Average running for InsertionSort: " << (totalTimeForInsertionSort / 100) << std::endl;
+	
+	std::cout << "Average running for Quicksort: " << (totalTimeForQuickSort / 100) << "nanoseconds" << std::endl;
+	std::cout << "Average running for InsertionSort: " << (totalTimeForInsertionSort / 100) <<"nanoseconds"<< std::endl;
+	std::cout << "The amount of instruction runned per sec: " << (100000000/(totalTimeForInsertionSort/100)*1000000000) << std::endl;
 	return 0;
 }
 void quickSort(int low, int high, std::vector<int>& v) {
@@ -74,7 +71,7 @@ void quickSort(int low, int high, std::vector<int>& v) {
 
 	}
 }
-void insertionSort(std::vector<int>& v) {
+void insertionSort(std::vector<int> v) {
 	for (int i = 0; i < v.size(); i++) {
 		for (int k = 0; k < i; k++) {
 			if (v[k] >= v[i]) {
