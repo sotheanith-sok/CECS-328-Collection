@@ -6,7 +6,7 @@
 #include <chrono>
 
 void quickSort(int a, int b, std::vector<int>& v );
-void insertionSort(std::vector<int>);
+void insertionSort(std::vector<int>& v);
 int main() { 
 	srand((unsigned)time(0));
 	int size;
@@ -74,7 +74,7 @@ void quickSort(int low, int high, std::vector<int>& v) {
 
 	}
 }
-void insertionSort(std::vector<int> v) {
+void insertionSort(std::vector<int>& v) {
 	for (int i = 0; i < v.size(); i++) {
 		for (int k = 0; k < i; k++) {
 			if (v[k] >= v[i]) {
