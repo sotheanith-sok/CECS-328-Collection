@@ -1,6 +1,6 @@
 ﻿  Lab4.cpp
-d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(37): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(64): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\workspace\cecs-328\lab4-maxheap\lab4-maxheap\lab4.cpp(74): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Lab4-MaxHeap.vcxproj -> D:\Workspace\CECS-328\Lab4-MaxHeap\x64\Debug\Lab4-MaxHeap.exe
   Lab4-MaxHeap.vcxproj -> D:\Workspace\CECS-328\Lab4-MaxHeap\x64\Debug\Lab4-MaxHeap.pdb (Partial PDB)
