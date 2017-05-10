@@ -1,21 +1,26 @@
 #pragma once
-#include <list>;
+#include <vector>
+#include <algorithm>
+#include <iostream>
 class Node
 {
 public:
 	Node(int v);
-	Node(int v, std::list<Node> list);
 	~Node();
-	std::string getValue();
-	std::string setValue(std::string v);
-	std::list<Node> getAdj();
+	int getValue();
+	void setValue(int v);
+	std::vector<Node> getAdj();
+	std::vector<int> getWeight();
 	void removeAdjNode(Node n);
-	void addAdj(Node n);
+	bool addAdj(Node n);
+	bool addAdjWithWeight(Node n, int w);
 	void setLevel(int i);
 	int getLevel();
 private:
-	std::string value;
-	std::list<Node> adj;
+	int posDetector(Node n);
+	int value;
+	std::vector<Node> adj;
+	std::vector<int> adjWeight;
 	Node* parent = nullptr;
 	int level=0;
 };

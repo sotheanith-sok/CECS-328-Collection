@@ -5,39 +5,70 @@ Node::Node(int v)
 	value = v;
 }
 
-Node::Node(int v, std::list<Node> list)
-{
-	value = v;
-	adj = list;
-}
 
 Node::~Node()
 {
 }
 
-std::string Node::getValue()
+int Node::getValue()
 {
 	return value;
 }
 
-std::string Node::setValue(std::string v)
+
+void Node::setValue(int v)
 {
 	value = v;
 }
 
-std::list<Node> Node::getAdj()
+std::vector<Node> Node::getAdj()
 {
 	return adj;
 }
 
-void Node::removeAdjNode(Node n)
+std::vector<int> Node::getWeight()
 {
-	adj.remove(n);
+	return adjWeight;
 }
 
-void Node::addAdj(Node n)
+
+void Node::removeAdjNode(Node n)
 {
-	adj.push_back(n);
+	int pos = posDetector(n);
+	if (pos == -1) {
+		std::cout << "Edge does not exist." << std::endl;
+	}
+	else {
+		adj.erase(adj.begin() + pos);
+		adjWeight.erase(adjWeight.begin() + pos);
+	}
+}
+
+
+
+bool Node::addAdj(Node n)
+{
+	int pos = posDetector(n);
+	if (pos = -1) {
+		adj.push_back(n);
+		adjWeight.push_back(1);
+		return 1;
+	}
+	else
+		return 0;
+	
+}
+
+bool Node::addAdjWithWeight(Node n, int w)
+{	
+	int pos = posDetector(n);
+	if (pos = -1) {
+		adj.push_back(n);
+		adjWeight.push_back(w);
+		return 1;
+	}
+	else
+		return 0;
 }
 
 void Node::setLevel(int i)
@@ -48,4 +79,15 @@ void Node::setLevel(int i)
 int Node::getLevel()
 {
 	return level;
+}
+
+int Node::posDetector(Node n)
+{
+	int pos = -1;
+	for (int i = 0; i < adj.size(); i++) {
+		if (adj[i].getValue() == n.getValue()) {
+			pos = i;
+		}
+	}
+	return pos;
 }
