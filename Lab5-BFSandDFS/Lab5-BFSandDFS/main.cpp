@@ -1,6 +1,12 @@
 #include "Node.h"
 #include <iostream>
+#include <ctime>
+#include <algorithm>
 int main() {
+	//Random Seed for srand
+	srand((unsigned)time(0));
+
+	//Get User values
 	int v=0, e = 0;
 	std::cout<<"Enter number of vertices:";
 	std::cin >> v;
@@ -9,13 +15,15 @@ int main() {
 	std::cin >> e;
 	std::cout << std::endl;
 	std::vector<Node> n;
+	
 	//Create Vertices list
 	for (int i = 0 ; i < v; i++) {
 		n.push_back(Node(i));
 	}
-	//Randomize Edges
-	for (int i = 0; i < e; i++) {
 
+	//Randomize Edges
+	while (e > 0) {
+				
 	}
 
 
