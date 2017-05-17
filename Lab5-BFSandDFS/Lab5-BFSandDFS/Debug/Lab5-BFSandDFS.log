@@ -1,3 +1,9 @@
 ﻿  main.cpp
-  Lab5-BFSandDFS.vcxproj -> D:\Workspace\CECS-328\Lab5-BFSandDFS\Debug\Lab5-BFSandDFS.exe
-  Lab5-BFSandDFS.vcxproj -> D:\Workspace\CECS-328\Lab5-BFSandDFS\Debug\Lab5-BFSandDFS.pdb (Full PDB)
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(55): warning C4018: '<': signed/unsigned mismatch
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(74): warning C4018: '<': signed/unsigned mismatch
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(91): warning C4018: '<': signed/unsigned mismatch
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(116): warning C4018: '<': signed/unsigned mismatch
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(129): warning C4018: '<': signed/unsigned mismatch
+d:\workstation\cecs-328\lab5-bfsanddfs\lab5-bfsanddfs\main.cpp(139): warning C4018: '<': signed/unsigned mismatch
+  Lab5-BFSandDFS.vcxproj -> D:\Workstation\CECS-328\Lab5-BFSandDFS\Debug\Lab5-BFSandDFS.exe
+  Lab5-BFSandDFS.vcxproj -> D:\Workstation\CECS-328\Lab5-BFSandDFS\Debug\Lab5-BFSandDFS.pdb (Partial PDB)

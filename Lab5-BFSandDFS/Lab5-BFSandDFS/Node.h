@@ -7,21 +7,31 @@ class Node
 public:
 	Node(int v);
 	~Node();
-	int getValue();
+	int getValue() const;
 	void setValue(int v);
-	std::vector<Node> getAdj();
-	std::vector<int> getWeight();
-	void removeAdjNode(Node n);
-	bool addAdj(Node n);
-	bool addAdjWithWeight(Node n, int w);
+	void setParent(int p);
+	void setStart(int p);
+	void setEnd(int p);
+	std::vector<Node*> getAdj();
+	void removeAdjNode(Node& n);
+	bool addAdj(Node* n);
 	void setLevel(int i);
 	int getLevel();
+	int getParent();
+	int getStart();
+	int getEnd();
+	bool operator== (const Node &a);
+	bool operator!= (const Node &a);
+	bool operator< (const Node &a);
+	bool operator> (const Node &a);
+	int posDetector(Node& n);
+	
 private:
-	int posDetector(Node n);
 	int value;
-	std::vector<Node> adj;
-	std::vector<int> adjWeight;
-	Node* parent = nullptr;
-	int level=0;
+	int parent=-2 ;
+	int level=0 ;
+	int start = -2;
+	int end = -2;
+	std::vector<Node*> adj;
 };
 
