@@ -4,7 +4,7 @@
 A collection of assignments for the CECS 328 class.
 
 ## Prerequisites
- - [Verilog](https://www.xilinx.com/)
+ - [C++](http://mingw-w64.org/)
 
 ## Author
  - [Sotheanith Sok](https://github.com/sotheanith)
