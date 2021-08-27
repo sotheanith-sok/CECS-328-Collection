@@ -6,7 +6,7 @@ A collection of assignments for the CECS 328 class.
 ## Prerequisites
  - [C++](http://mingw-w64.org/)
 
-## Author
+## Authors
  - [Sotheanith Sok](https://github.com/sotheanith)
 
 ## Course
