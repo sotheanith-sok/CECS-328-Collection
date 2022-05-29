@@ -7,7 +7,7 @@ A collection of assignments for the CECS 328 class.
  - [C++](http://mingw-w64.org/)
 
 ## Authors
- - [Sotheanith Sok](https://github.com/sotheanith)
+ - [Sotheanith Sok](https://github.com/sotheanith-sok)
 
 ## Course
  - [CECS 328 - Algorithms](http://catalog.csulb.edu/preview_course_nopop.php?catoid=5&coid=39991)
